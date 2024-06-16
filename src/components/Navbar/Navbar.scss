@@ -1,0 +1,59 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+
+//     How It Works Together
+// When the parent container has display: flex; and its children (.left and .right) have the flex property set, the available space in the container is divided based on the specified ratios.
+//     If the total available space is 100 units, then:
+//         .left will take up (3/(3+2)) * 100 = 60 units.
+//         .right will take up (2/(3+2)) * 100 = 40 units.
+    
+
+    a{
+        transition: all 0.4s ease;
+
+        &:hover{
+            scale: 1.05;
+        }
+    }
+    .left{
+        flex: 3;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+
+        .logo{
+            font-weight: bold;
+            font-size: 20px;
+            align-items: center;
+            display: flex;
+            gap: 10px;
+
+            img{
+                width: 28px;
+            }
+        }
+    }
+
+    .right{
+        flex: 2;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: #fcf5f3;
+        height: 100%;
+        
+        a{
+            padding: 12px 24px;
+            margin: 20px;
+        }
+        .SignUp{
+            background-color: #fece51;
+
+
+        }
+
+    }
+}
